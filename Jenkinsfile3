@@ -26,7 +26,7 @@ pipeline {
             parallel {
                 stage('Unit Tests') {
                     when {
-                        succeeded() 
+                        expression { currentBuild.currentResult == 'SUCCESS' }
                     }
                     steps {
                         echo 'Running unit tests...'
