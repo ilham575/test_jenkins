@@ -16,20 +16,19 @@ pipeline {
                 echo 'Deploying the application...'
             }
         }
-        post {
-
-            success {
+    }
+    post {
+        success {
 
                 echo 'Pipeline completed successfully 🎉'
 
-            }
+        }
 
-            failure {
+        failure {
 
                 echo 'Pipeline failed ❌'
 
-            }
-
         }
+
     }
 }
