@@ -1,4 +1,4 @@
- pipeline {
+pipeline {
     agent any
     stages {
         stage('Build') {
@@ -18,3 +18,20 @@
         }
     }
 }
+
+post {
+
+    success {
+
+        echo 'Pipeline completed successfully 🎉'
+
+    }
+
+    failure {
+
+        echo 'Pipeline failed ❌'
+
+    }
+
+}
+
